@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аналитический дайджест: КНР 15-я пятилетка</title>
+    <title>КНР 15-я пятилетка</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- ШРИФТЫ: импортируем Onest из Google Fonts -->
@@ -445,7 +445,7 @@
 
 <footer class="bg-white py-12 px-6 border-t border-gray-100">
     <div class="max-w-5xl mx-auto text-center">
-        <p class="text-[#8b2e1b] font-bold tracking-widest uppercase text-xs mb-4">Атлас Байцзэ. Аналитический дайджест: 15-я пятилетка КНР</p>
+        <p class="text-[#8b2e1b] font-bold tracking-widest uppercase text-xs mb-4">15-я пятилетка КНР</p>
         <p class="text-gray-600 text-sm">
             О Китае в <a href="http://t.me/cceis_china" target="_blank" rel="noopener noreferrer" class="text-[#8b2e1b] hover:opacity-70 font-semibold transition-opacity">Атласе Байцзэ</a>
         </p>
