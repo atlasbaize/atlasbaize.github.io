@@ -1,15 +1,11 @@
+
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>КНР 15-я пятилетка</title>
+    <title>Аналитический дайджест: КНР 15-я пятилетка</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- ШРИФТЫ: импортируем Onest из Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap" rel="stylesheet">
-    
     <style>
         :root {
             --atlas-red: #8b2e1b;
@@ -17,22 +13,12 @@
             --atlas-text: #2d2d2d;
             --atlas-border: #e8e1da;
         }
-        
-        /* ШРИФТЫ: Основной текст - Onest Regular (400) */
         body {
             background-color: var(--atlas-cream);
             color: var(--atlas-text);
             scroll-behavior: smooth;
-            font-family: 'Onest', sans-serif;
-            font-weight: 400;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
-        
-        /* ШРИФТЫ: Заголовки - Onest Semibold (600) */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Onest', sans-serif;
-            font-weight: 600;
-        }
-        
         .block-card {
             background: white;
             border-radius: 16px;
@@ -79,7 +65,7 @@
             padding: 1rem;
             border-bottom: 2px solid var(--atlas-border);
             color: var(--atlas-red);
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             font-size: 0.75rem;
             letter-spacing: 0.05em;
@@ -93,7 +79,7 @@
         }
         .section-title {
             color: var(--atlas-red);
-            font-weight: 600;
+            font-weight: 800;
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
             display: flex;
@@ -443,13 +429,9 @@
 
 </main>
 
-<footer class="bg-white py-12 px-6 border-t border-gray-100">
-    <div class="max-w-5xl mx-auto text-center">
-        <p class="text-[#8b2e1b] font-bold tracking-widest uppercase text-xs mb-4">15-я пятилетка КНР</p>
-        <p class="text-gray-600 text-sm">
-            О Китае в <a href="http://t.me/cceis_china" target="_blank" rel="noopener noreferrer" class="text-[#8b2e1b] hover:opacity-70 font-semibold transition-opacity">Атласе Байцзэ</a>
-        </p>
-    </div>
+<footer class="bg-white py-12 px-6 text-center border-t border-gray-100">
+    <p class="text-[#8b2e1b] font-bold tracking-widest uppercase text-xs">Атлас Байцзэ. Аналитический дайджест: 15-я пятилетка КНР</p>
 </footer>
+
 </body>
 </html>
