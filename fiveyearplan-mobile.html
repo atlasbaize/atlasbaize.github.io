@@ -139,7 +139,7 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(253, 250, 247, 0.98);
+            background: rgba(253, 250, 247, 0.95);
             backdrop-filter: blur(10px);
             z-index: 50;
             border-bottom: 1px solid var(--atlas-border);
@@ -149,14 +149,6 @@
                 position: sticky;
             }
         }
-        main {
-            padding-top: 80px;
-        }
-        @media (min-width: 768px) {
-            main {
-                padding-top: 0;
-            }
-        }
         .output-block {
             background-color: #fcf8f6;
             border-radius: 12px;
@@ -164,28 +156,11 @@
             margin-top: 1.5rem;
             border-left: 4px solid var(--atlas-red);
         }
-        .table-responsive {
-            overflow-x: auto;
-            margin: 1.5rem -1rem;
-            padding: 0 1rem;
-        }
-        @media (min-width: 768px) {
-            .table-responsive {
-                overflow-x: visible;
-                margin: 1.5rem 0;
-                padding: 0;
-            }
-        }
-        .table-responsive table {
+        table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            min-width: 250px;
-        }
-        @media (max-width: 480px) {
-            .table-responsive table {
-                min-width: 100%;
-            }
+            margin: 1.5rem 0;
         }
         th {
             background-color: #f9f5f2;
@@ -223,32 +198,54 @@
         .section-title {
             color: var(--atlas-red);
             font-weight: 800;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
-            line-height: 1.2;
         }
-        @media (min-width: 768px) {
+        @media (max-width: 640px) {
             .section-title {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
             }
         }
         .section-title::before {
             content: "";
             display: inline-block;
-            width: 8px;
-            height: 8px;
+            width: 12px;
+            height: 12px;
             background-color: var(--atlas-red);
             border-radius: 50%;
-            margin-right: 10px;
-            flex-shrink: 0;
+            margin-right: 12px;
+        }
+        @media (max-width: 640px) {
+            .section-title::before {
+                width: 8px;
+                height: 8px;
+                margin-right: 8px;
+            }
+        }
+        .footer-link {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid #8b2e1b;
+            transition: opacity 0.2s;
+        }
+        .footer-link:hover {
+            opacity: 0.7;
+        }
+        main {
+            padding-top: 70px;
+        }
+        .overflow-x-auto {
+            overflow-x: auto;
+            margin: 1.5rem -1rem;
+            padding: 0 1rem;
         }
         @media (min-width: 768px) {
-            .section-title::before {
-                width: 12px;
-                height: 12px;
-                margin-right: 12px;
+            .overflow-x-auto {
+                overflow-x: visible;
+                margin: 1.5rem 0;
+                padding: 0;
             }
         }
         .footer-link {
@@ -264,15 +261,15 @@
 </head>
 <body>
 
-<header class="bg-white py-4 px-4 border-b border-gray-100 md:py-10 md:px-6">
-    <div class="max-w-5xl mx-auto flex items-center gap-4">
-        <div class="header-banner shadow-lg flex-1">
-            <h1>Атлас Байцзэ. 15-я пятилетка КНР</h1>
+<header class="bg-white py-10 px-6 border-b border-gray-100">
+    <div class="max-w-5xl mx-auto flex items-center">
+        <div class="header-banner shadow-lg">
+            <h1 class="text-xl md:text-2xl font-bold tracking-tight">Атлас Байцзэ. Аналитический дайджест: 15-я пятилетка КНР</h1>
         </div>
     </div>
 </header>
 
-<nav class="sticky-nav py-3 px-4 md:py-4 md:px-6 relative">
+<nav class="sticky-nav py-4 px-6 relative">
     <div class="max-w-5xl mx-auto flex items-center justify-between">
         <button class="hamburger" id="hamburgerBtn">
             <span></span>
@@ -286,7 +283,7 @@
             <a href="#part4" class="nav-link">Цифра</a>
             <a href="#part8" class="nav-link">Агро</a>
             <a href="#part13" class="nav-link">Экология</a>
-            <a href="#summary" class="nav-link uppercase tracking-wider font-bold">Итоги</a>
+            <a href="#summary" class="nav-link uppercase tracking-wider">Итоги</a>
         </div>
     </div>
 </nav>
@@ -296,19 +293,19 @@
     <!-- PART I -->
     <section id="part1" class="block-card">
         <h2 class="section-title">Часть I. Общая рамка, среда, принципы и целевые ориентиры</h2>
-        <p class="mb-6 leading-relaxed text-sm md:text-base">Документ формирует стратегическую рамку развития Китая на 2026–2030 гг. Основное внимание уделяется переходу к высококачественному развитию (高质量发展), укреплению устойчивости экономической системы и повышению научно-технологического потенциала страны.</p>
+        <p class="mb-6 leading-relaxed">Документ формирует стратегическую рамку развития Китая на 2026–2030 гг. Основное внимание уделяется переходу к высококачественному развитию (高质量发展), укреплению устойчивости экономической системы и повышению научно-технологического потенциала страны.</p>
         
-        <h3 class="font-bold text-xs uppercase tracking-widest mb-4 text-[#8b2e1b] opacity-80">Ключевые показатели</h3>
+        <h3 class="font-bold text-sm uppercase tracking-widest mb-4 text-[#8b2e1b] opacity-80">Ключевые показатели</h3>
         
         <div class="mb-8">
-            <h4 class="font-bold mb-3 text-sm md:text-base text-gray-700">Экономика</h4>
-            <div class="table-responsive md:overflow-visible">
+            <h4 class="font-bold mb-2 text-gray-700">Экономика</h4>
+            <div class="overflow-x-auto">
                 <table>
                     <thead>
                         <tr><th>Показатель</th><th>База</th><th>Цель</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Рост ВВП</td><td>—</td><td>поддержание роста в разумном диапазоне</td></tr>
+                        <tr><td>Рост ВВП</td><td>—</td><td>поддержание роста в разумном диапазоне, конкретизация по годам</td></tr>
                         <tr><td>Рост производительности труда</td><td>—</td><td>выше темпа роста ВВП</td></tr>
                         <tr><td>Урбанизация</td><td>67.9%</td><td>71%</td></tr>
                     </tbody>
@@ -317,33 +314,33 @@
         </div>
 
         <div class="mb-8">
-            <h4 class="font-bold mb-3 text-sm md:text-base text-gray-700">Инновации</h4>
-            <div class="table-responsive md:overflow-visible">
+            <h4 class="font-bold mb-2 text-gray-700">Инновации</h4>
+            <div class="overflow-x-auto">
                 <table>
                     <thead>
                         <tr><th>Показатель</th><th>База</th><th>Цель</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Интенсивность расходов на НИОКР</td><td>2.8% ВВП</td><td>свыше 7% ежегодно</td></tr>
-                        <tr><td>Доля цифровой экономики в ВВП</td><td>10.5%</td><td>12.5%</td></tr>
+                        <tr><td>Интенсивность расходов на НИОКР</td><td>2.8% ВВП</td><td>среднегодовой рост расходов более 7%</td></tr>
+                        <tr><td>Доля базовых отраслей цифровой экономики в ВВП</td><td>10.5%</td><td>12.5%</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
         <div class="mb-8">
-            <h4 class="font-bold mb-3 text-sm md:text-base text-gray-700">Благосостояние</h4>
-            <div class="table-responsive md:overflow-visible">
+            <h4 class="font-bold mb-2 text-gray-700">Благосостояние</h4>
+            <div class="overflow-x-auto">
                 <table>
                     <thead>
                         <tr><th>Показатель</th><th>База</th><th>Цель</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Рост доходов населения</td><td>—</td><td>синхронно росту ВВП</td></tr>
-                        <tr><td>Городская безработица</td><td>—</td><td>ниже 5.5%</td></tr>
-                        <tr><td>Продолжительность обучения</td><td>11.3 лет</td><td>11.7 лет</td></tr>
-                        <tr><td>Уход в учреждениях для пожилых</td><td>68%</td><td>73%</td></tr>
-                        <tr><td>Охват ухода за детьми до 3 лет</td><td>—</td><td>+6 п.п.</td></tr>
+                        <tr><td>Рост доходов населения</td><td>—</td><td>синхронно росту экономики</td></tr>
+                        <tr><td>Городская обследуемая безработица</td><td>—</td><td>ниже 5.5%</td></tr>
+                        <tr><td>Средняя продолжительность обучения трудоспособного населения</td><td>11.3 лет</td><td>11.7 лет</td></tr>
+                        <tr><td>Доля коек ухода в учреждениях для пожилых</td><td>68%</td><td>73%</td></tr>
+                        <tr><td>Охват ухода за детьми до 3 лет</td><td>—</td><td>рост на 6 п.п.</td></tr>
                         <tr><td>Ожидаемая продолжительность жизни</td><td>79.25 лет</td><td>80 лет</td></tr>
                     </tbody>
                 </table>
@@ -351,17 +348,17 @@
         </div>
 
         <div class="mb-8">
-            <h4 class="font-bold mb-3 text-sm md:text-base text-gray-700">Экологические показатели</h4>
-            <div class="table-responsive md:overflow-visible">
+            <h4 class="font-bold mb-2 text-gray-700">Экологические показатели</h4>
+            <div class="overflow-x-auto">
                 <table>
                     <thead>
                         <tr><th>Показатель</th><th>База</th><th>Цель</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Углеродоёмкость ВВП</td><td>—</td><td>−17%</td></tr>
-                        <tr><td>Неископаемая энергия</td><td>21.7%</td><td>25%</td></tr>
+                        <tr><td>Снижение углеродоёмкости ВВП</td><td>—</td><td>−17% за пятилетку</td></tr>
+                        <tr><td>Доля неископаемой энергии</td><td>21.7%</td><td>25%</td></tr>
                         <tr><td>PM2.5</td><td>28</td><td>ниже 27</td></tr>
-                        <tr><td>Воды хорошего качества</td><td>80%</td><td>85%</td></tr>
+                        <tr><td>Доля вод хорошего качества</td><td>80%</td><td>85%</td></tr>
                         <tr><td>Лесистость</td><td>25.1%</td><td>25.8%</td></tr>
                     </tbody>
                 </table>
@@ -369,8 +366,8 @@
         </div>
 
         <div class="mb-8">
-            <h4 class="font-bold mb-3 text-sm md:text-base text-gray-700">Безопасность</h4>
-            <div class="table-responsive md:overflow-visible">
+            <h4 class="font-bold mb-2 text-gray-700">Безопасность</h4>
+            <div class="overflow-x-auto">
                 <table>
                     <thead>
                         <tr><th>Показатель</th><th>База</th><th>Цель</th></tr>
@@ -385,175 +382,217 @@
 
         <div class="output-block">
             <p class="font-bold text-[#8b2e1b] mb-2 uppercase text-xs tracking-widest">Вывод</p>
-            <p class="italic text-gray-700 text-sm md:text-base">На фоне внутренних и внешних вызовов документ закрепляет курс на более устойчивую модель развития, в которой темпы роста подчиняются задаче повышения качества, устойчивости и безопасности.</p>
+            <p class="italic text-gray-700">На фоне сохраняющихся внутренних и внешних вызовов в документе закрепляется курс на более устойчивую модель развития, в которой темпы роста подчиняются задаче повышения качества, устойчивости и безопасности. Цели верхнего уровня сочетают гибкость в макроэкономической настройке с более жёсткими ориентирами в социальной, экологической и ресурсной сферах.</p>
         </div>
     </section>
 
     <!-- PART II -->
     <section id="part2" class="block-card">
-        <h2 class="section-title">Часть II. Промышленность и инфраструктура</h2>
-        <p class="mb-6 text-sm md:text-base">Развитие промышленности рассматривается как ключевой механизм формирования новых источников роста. Акцент сделан на модернизации традиционных отраслей, развитии новых индустрий и расширении инфраструктурной базы.</p>
+        <h2 class="section-title">Часть II. Современная промышленная система, услуги и инфраструктура</h2>
+        <p class="mb-6">Развитие промышленности рассматривается как один из ключевых механизмов формирования новых источников роста. Акцент сделан на модернизации традиционных отраслей, развитии новых индустрий и расширении инфраструктурной базы.</p>
 
-        <h4 class="font-bold mb-3 text-sm md:text-base text-gray-700">Инфраструктурные ориентиры</h4>
-        <div class="table-responsive md:overflow-visible">
+        <h4 class="font-bold mb-2 text-gray-700">Ключевые инфраструктурные ориентиры</h4>
+        <div class="overflow-x-auto mb-6">
             <table>
                 <thead>
-                    <tr><th>Направление</th><th>Цель</th></tr>
+                    <tr><th>Направление</th><th>Показатель</th><th>Цель</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Гидроаккумулирующие станции</td><td>100 млн кВт</td></tr>
-                    <tr><td>Морская ветроэнергетика</td><td>100+ млн кВт</td></tr>
-                    <tr><td>Атомная энергетика</td><td>110 млн кВт</td></tr>
-                    <tr><td>Передача электроэнергии запад–восток</td><td>420+ млн кВт</td></tr>
+                    <tr><td>Гидроаккумулирующие станции</td><td>новые мощности</td><td>около 100 млн кВт</td></tr>
+                    <tr><td>Морская ветроэнергетика</td><td>установленная мощность</td><td>более 100 млн кВт</td></tr>
+                    <tr><td>Атомная энергетика</td><td>действующая мощность</td><td>около 110 млн кВт</td></tr>
+                    <tr><td>Передача электроэнергии запад–восток</td><td>пропускная способность</td><td>более 420 млн кВт</td></tr>
                 </tbody>
             </table>
         </div>
 
-        <h4 class="font-bold mb-3 text-sm md:text-base text-gray-700 mt-6">Цифровая инфраструктура</h4>
-        <div class="table-responsive md:overflow-visible">
+        <h4 class="font-bold mb-2 text-gray-700">Цифровая инфраструктура</h4>
+        <div class="overflow-x-auto mb-6">
             <table>
                 <thead>
                     <tr><th>Показатель</th><th>Цель</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Порты 50G PON</td><td>1 млн</td></tr>
-                    <tr><td>Базовые станции 5G-Advanced</td><td>500 тыс.</td></tr>
+                    <tr><td>Порты 50G PON</td><td>1 000 000</td></tr>
+                    <tr><td>Базовые станции 5G-Advanced</td><td>500 000</td></tr>
                 </tbody>
             </table>
         </div>
 
         <div class="output-block">
             <p class="font-bold text-[#8b2e1b] mb-2 uppercase text-xs tracking-widest">Вывод</p>
-            <p class="italic text-gray-700 text-sm md:text-base">Опора на крупные инфраструктурные мощности показывает увязку промышленной политики с задачами энергетической устойчивости и технологического обновления.</p>
+            <p class="italic text-gray-700">Опора на крупные инфраструктурные мощности показывает, что промышленная политика увязана с задачами энергетической устойчивости, технологического обновления и расширения цифровой базы. В документе инфраструктура выступает как один из базовых инструментов формирования новых производительных сил.</p>
         </div>
     </section>
 
     <!-- PART III -->
     <section id="part3" class="block-card">
-        <h2 class="section-title">Часть III. Наука и технологии</h2>
-        <p class="mb-6 text-sm md:text-base">Развитие научно-технологического потенциала рассматривается как фундамент модернизации экономики. Особое внимание уделяется достижению высокоуровневой научно-технологической самостоятельности.</p>
+        <h2 class="section-title">Часть III. Наука, технологии, образование и кадры</h2>
+        <p class="mb-6">Развитие научно-технологического потенциала рассматривается как фундамент модернизации экономики. Особое внимание уделяется достижению высокоуровневой научно-технологической самостоятельности (高水平科技自立自强).</p>
 
-        <div class="table-responsive md:overflow-visible">
+        <div class="overflow-x-auto mb-6">
             <table>
                 <thead>
                     <tr><th>Показатель</th><th>Цель</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Рост расходов на НИОКР</td><td>7% ежегодно</td></tr>
-                    <tr><td>Научно-технологическая система</td><td>развитие национальных лабораторий</td></tr>
+                    <tr><td>Рост расходов на НИОКР</td><td>среднегодовой рост более 7%</td></tr>
+                    <tr><td>Научно-технологическая система</td><td>развитие национальных лабораторий, передовых исследований и ключевых технологических направлений</td></tr>
                 </tbody>
             </table>
         </div>
 
         <div class="output-block">
             <p class="font-bold text-[#8b2e1b] mb-2 uppercase text-xs tracking-widest">Вывод</p>
-            <p class="italic text-gray-700 text-sm md:text-base">Технологическое давление усиливает акцент на научной самостоятельности как условии долгосрочного развития.</p>
+            <p class="italic text-gray-700">В условиях усиливающегося внешнего технологического давления в документе усиливается акцент на научно-технологической самостоятельности как на одном из ключевых условий долгосрочного развития. Приоритет отдается критически важным технологиям, усилению исследовательской базы и укреплению роли предприятий в инновационном процессе.</p>
         </div>
     </section>
 
     <!-- PART IV -->
     <section id="part4" class="block-card">
-        <h2 class="section-title">Часть IV. Цифровой Китай и ИИ</h2>
-        <p class="mb-6 text-sm md:text-base">Цифровая трансформация экономики рассматривается как универсальный инструмент повышения эффективности промышленности и услуг.</p>
+        <h2 class="section-title">Часть IV. Цифровой Китай и внедрение ИИ</h2>
+        <p class="mb-6">Цифровая трансформация экономики рассматривается как универсальный инструмент повышения эффективности промышленности, услуг и государственного управления.</p>
 
-        <div class="table-responsive md:overflow-visible">
+        <div class="overflow-x-auto mb-6">
             <table>
                 <thead>
                     <tr><th>Показатель</th><th>База</th><th>Цель</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Доля цифровой экономики</td><td>10.5%</td><td>12.5%</td></tr>
+                    <tr><td>Доля базовых отраслей цифровой экономики в ВВП</td><td>10.5%</td><td>12.5%</td></tr>
                     <tr><td>Порты 50G PON</td><td>—</td><td>1 млн</td></tr>
-                    <tr><td>Станции 5G-Advanced</td><td>—</td><td>500 тыс.</td></tr>
+                    <tr><td>Базовые станции 5G-Advanced</td><td>—</td><td>500 тыс.</td></tr>
                 </tbody>
             </table>
         </div>
 
         <div class="output-block">
             <p class="font-bold text-[#8b2e1b] mb-2 uppercase text-xs tracking-widest">Вывод</p>
-            <p class="italic text-gray-700 text-sm md:text-base">Цифровизация встроена в общую стратегию модернизации экономики и развития инфраструктуры.</p>
+            <p class="italic text-gray-700">По мере усложнения структуры экономики цифровизация занимает всё более важное место в системе экономического и управленческого развития. Развитие сетевой и вычислительной инфраструктуры в документе рассматривается как необходимая основа для более широкого применения цифровых технологий и искусственного интеллекта.</p>
+        </div>
+    </section>
+
+    <!-- OTHER PARTS COMBINED FOR BREVITY BUT KEEPING TEXT -->
+    <section id="part5" class="block-card">
+        <h2 class="section-title">Часть V. Сильный внутренний рынок</h2>
+        <div class="overflow-x-auto mb-6">
+            <table>
+                <thead>
+                    <tr><th>Показатель</th><th>Цель</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Рост доходов населения</td><td>синхронно росту экономики</td></tr>
+                    <tr><td>Городская обследуемая безработица</td><td>ниже 5.5%</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="output-block">
+            <p class="font-bold text-[#8b2e1b] mb-2 uppercase text-xs tracking-widest">Вывод</p>
+            <p class="italic text-gray-700">В документе усиливается значение внутреннего спроса как одной из опор дальнейшего развития. Поддержка занятости, доходов населения и формирование единого национального рынка связаны с задачей повышения внутренней устойчивости экономики.</p>
         </div>
     </section>
 
     <!-- PART VIII -->
     <section id="part8" class="block-card">
         <h2 class="section-title">Часть VIII. Сельское хозяйство</h2>
-        <div class="table-responsive md:overflow-visible">
+        <div class="overflow-x-auto mb-6">
             <table>
                 <thead>
                     <tr><th>Показатель</th><th>Цель</th></tr>
                 </thead>
                 <tbody>
                     <tr><td>Совокупная производственная мощность зерна</td><td>около 725 млн т</td></tr>
-                    <tr><td>Самообеспечение семенами</td><td>85%</td></tr>
-                    <tr><td>Механизация сельского хозяйства</td><td>80%+</td></tr>
+                    <tr><td>Самообеспечение ключевыми семенами</td><td>85%</td></tr>
+                    <tr><td>Комплексная механизация сельского хозяйства</td><td>более 80%</td></tr>
                     <tr><td>Ключевые зерновые уезды</td><td>720</td></tr>
                 </tbody>
             </table>
         </div>
         <div class="output-block">
             <p class="font-bold text-[#8b2e1b] mb-2 uppercase text-xs tracking-widest">Вывод</p>
-            <p class="italic text-gray-700 text-sm md:text-base">Продовольственная безопасность напрямую связывается с устойчивостью сельского хозяйства и качеством землепользования.</p>
+            <p class="italic text-gray-700">В документе продовольственная безопасность напрямую связывается с устойчивостью сельского хозяйства, семеноводства, механизации и повышением качества землепользования. Аграрная политика рассматривается как системный элемент долгосрочной устойчивости страны.</p>
+        </div>
+    </section>
+
+    <!-- PART XI–XII -->
+    <section id="part11" class="block-card">
+        <h2 class="section-title">Часть XI–XII. Население и благосостояние</h2>
+        <div class="overflow-x-auto mb-6">
+            <table>
+                <thead>
+                    <tr><th>Показатель</th><th>База</th><th>Цель</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Средняя продолжительность обучения трудоспособного населения</td><td>11.3 лет</td><td>11.7 лет</td></tr>
+                    <tr><td>Доля коек ухода в учреждениях для пожилых</td><td>68%</td><td>73%</td></tr>
+                    <tr><td>Охват ухода за детьми до 3 лет</td><td>—</td><td>рост на 6 п.п.</td></tr>
+                    <tr><td>Ожидаемая продолжительность жизни</td><td>79.25 лет</td><td>80 лет</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="output-block">
+            <p class="font-bold text-[#8b2e1b] mb-2 uppercase text-xs tracking-widest">Вывод</p>
+            <p class="italic text-gray-700">На фоне демографических изменений в документе усиливается внимание к качеству человеческого капитала и развитию системы социальных услуг. Образование, уход за пожилыми, поддержка семей с детьми и рост ожидаемой продолжительности жизни выступают важными направлениями социальной политики.</p>
         </div>
     </section>
 
     <!-- PART XIII -->
     <section id="part13" class="block-card">
         <h2 class="section-title">Часть XIII. Зелёный переход</h2>
-        <div class="table-responsive md:overflow-visible">
+        <div class="overflow-x-auto mb-6">
             <table>
                 <thead>
                     <tr><th>Показатель</th><th>Цель</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Углеродоёмкость ВВП</td><td>−17%</td></tr>
-                    <tr><td>Неископаемая энергия</td><td>25%</td></tr>
+                    <tr><td>Снижение углеродоёмкости ВВП</td><td>−17%</td></tr>
+                    <tr><td>Доля неископаемой энергии</td><td>25%</td></tr>
                     <tr><td>PM2.5</td><td>ниже 27</td></tr>
-                    <tr><td>Воды хорошего качества</td><td>85%</td></tr>
+                    <tr><td>Доля вод хорошего качества</td><td>85%</td></tr>
                     <tr><td>Лесистость</td><td>25.8%</td></tr>
                 </tbody>
             </table>
         </div>
         <div class="output-block">
             <p class="font-bold text-[#8b2e1b] mb-2 uppercase text-xs tracking-widest">Вывод</p>
-            <p class="italic text-gray-700 text-sm md:text-base">Зелёный переход встроен в стратегию модернизации с целью повышения устойчивости развития.</p>
+            <p class="italic text-gray-700">В документе зелёный переход встроен в общую стратегию модернизации экономики и повышения устойчивости развития. Экологические цели сочетаются с задачами перестройки энергетической структуры и улучшения качества окружающей среды.</p>
         </div>
     </section>
 
     <!-- FINAL SUMMARY -->
-    <section id="summary" class="bg-[#8b2e1b] text-white rounded-2xl p-6 md:p-10 shadow-2xl mb-12">
-        <h2 class="text-xl md:text-2xl font-bold mb-6 md:mb-8 border-b border-red-800 pb-4">Итоговые выводы</h2>
-        <ul class="space-y-4 md:space-y-6">
-            <li class="flex items-start gap-3 md:gap-4">
-                <div class="w-2 h-2 mt-2 bg-white rounded-full flex-shrink-0"></div>
-                <span class="text-sm md:text-lg opacity-90">В документе сохраняется курс на переход к более устойчивой модели развития, ориентированной на повышение качества роста и технологического потенциала.</span>
+    <section id="summary" class="bg-[#8b2e1b] text-white rounded-2xl p-10 shadow-2xl mb-12">
+        <h2 class="text-2xl font-bold mb-8 border-b border-red-800 pb-4">Итоговые выводы по всему документу</h2>
+        <ul class="space-y-6">
+            <li class="flex items-start">
+                <div class="w-2 h-2 mt-2 bg-white rounded-full mr-4 flex-shrink-0"></div>
+                <span class="text-lg opacity-90">В документе сохраняется курс на переход к более устойчивой модели развития, ориентированной на повышение качества роста, технологического потенциала и общей устойчивости экономики.</span>
             </li>
-            <li class="flex items-start gap-3 md:gap-4">
-                <div class="w-2 h-2 mt-2 bg-white rounded-full flex-shrink-0"></div>
-                <span class="text-sm md:text-lg opacity-90">Научно-технологическая самостоятельность и развитие цифровой экономики занимают центральное место в приоритетах.</span>
+            <li class="flex items-start">
+                <div class="w-2 h-2 mt-2 bg-white rounded-full mr-4 flex-shrink-0"></div>
+                <span class="text-lg opacity-90">Научно-технологическая самостоятельность и развитие цифровой экономики занимают центральное место в системе приоритетов.</span>
             </li>
-            <li class="flex items-start gap-3 md:gap-4">
-                <div class="w-2 h-2 mt-2 bg-white rounded-full flex-shrink-0"></div>
-                <span class="text-sm md:text-lg opacity-90">Внутренний рынок рассматривается как важный источник устойчивого роста.</span>
+            <li class="flex items-start">
+                <div class="w-2 h-2 mt-2 bg-white rounded-full mr-4 flex-shrink-0"></div>
+                <span class="text-lg opacity-90">Внутренний рынок рассматривается как важный источник устойчивого роста, а инфраструктурная политика как ключевой инструмент модернизации.</span>
             </li>
-            <li class="flex items-start gap-3 md:gap-4">
-                <div class="w-2 h-2 mt-2 bg-white rounded-full flex-shrink-0"></div>
-                <span class="text-sm md:text-lg opacity-90">Социальная и экологическая повестка встроены в общую стратегию развития.</span>
+            <li class="flex items-start">
+                <div class="w-2 h-2 mt-2 bg-white rounded-full mr-4 flex-shrink-0"></div>
+                <span class="text-lg opacity-90">Социальная и экологическая повестка встроены в общую стратегию развития через систему целевых ориентиров и направлений политики.</span>
             </li>
-            <li class="flex items-start gap-3 md:gap-4">
-                <div class="w-2 h-2 mt-2 bg-white rounded-full flex-shrink-0"></div>
-                <span class="text-sm md:text-lg opacity-90">Безопасность рассматривается как один из базовых контуров реализации всех основных задач пятилетки.</span>
+            <li class="flex items-start">
+                <div class="w-2 h-2 mt-2 bg-white rounded-full mr-4 flex-shrink-0"></div>
+                <span class="text-lg opacity-90">Безопасность рассматривается как один из базовых контуров реализации всех основных задач пятилетки.</span>
             </li>
         </ul>
-        <div class="mt-10 md:mt-12 pt-6 md:pt-8 border-t border-red-800 text-center text-xs md:text-sm italic opacity-80">
+        <div class="mt-12 pt-8 border-t border-red-800 text-center text-sm italic opacity-80">
             Аналитический дайджест 15-й пятилетки КНР (2026–2030)
         </div>
     </section>
 
 </main>
 
-<footer class="bg-white py-8 md:py-12 px-4 md:px-6 text-center border-t border-gray-100">
-    <p class="text-[#8b2e1b] font-bold tracking-widest uppercase text-xs md:text-sm">
+<footer class="bg-white py-12 px-6 text-center border-t border-gray-100">
+    <p class="text-[#8b2e1b] font-bold tracking-widest uppercase text-xs">
         <a href="http://t.me/cceis_china" target="_blank" rel="noopener noreferrer" class="footer-link">Атлас Байцзэ</a>. Аналитический дайджест: 15-я пятилетка КНР
     </p>
 </footer>
