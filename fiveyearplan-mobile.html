@@ -135,12 +135,27 @@
             text-decoration: underline;
         }
         .sticky-nav {
-            position: sticky;
+            position: fixed;
             top: 0;
-            background: rgba(253, 250, 247, 0.95);
-            backdrop-filter: blur(8px);
+            left: 0;
+            right: 0;
+            background: rgba(253, 250, 247, 0.98);
+            backdrop-filter: blur(10px);
             z-index: 50;
             border-bottom: 1px solid var(--atlas-border);
+        }
+        @media (min-width: 768px) {
+            .sticky-nav {
+                position: sticky;
+            }
+        }
+        main {
+            padding-top: 80px;
+        }
+        @media (min-width: 768px) {
+            main {
+                padding-top: 0;
+            }
         }
         .output-block {
             background-color: #fcf8f6;
@@ -151,13 +166,26 @@
         }
         .table-responsive {
             overflow-x: auto;
-            margin: 1.5rem 0;
+            margin: 1.5rem -1rem;
+            padding: 0 1rem;
+        }
+        @media (min-width: 768px) {
+            .table-responsive {
+                overflow-x: visible;
+                margin: 1.5rem 0;
+                padding: 0;
+            }
         }
         .table-responsive table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            min-width: 300px;
+            min-width: 250px;
+        }
+        @media (max-width: 480px) {
+            .table-responsive table {
+                min-width: 100%;
+            }
         }
         th {
             background-color: #f9f5f2;
@@ -170,9 +198,24 @@
             font-size: 0.75rem;
             letter-spacing: 0.05em;
         }
+        @media (max-width: 640px) {
+            th {
+                padding: 0.5rem 0.4rem;
+                font-size: 0.6rem;
+            }
+        }
         td {
             padding: 1rem;
             border-bottom: 1px solid var(--atlas-border);
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+        @media (max-width: 640px) {
+            td {
+                padding: 0.5rem 0.4rem;
+                font-size: 0.75rem;
+                line-height: 1.3;
+            }
         }
         tr:hover td {
             background-color: #fffaf9;
@@ -248,7 +291,7 @@
     </div>
 </nav>
 
-<main class="max-w-5xl mx-auto p-4 md:p-12">
+<main class="max-w-5xl mx-auto p-3 md:p-12">
 
     <!-- PART I -->
     <section id="part1" class="block-card">
