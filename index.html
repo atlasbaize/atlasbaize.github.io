@@ -115,6 +115,8 @@
                 padding: 0;
                 box-shadow: none;
                 z-index: auto;
+                width: 100%;
+                justify-content: center;
             }
         }
         .nav-menu.active {
@@ -140,10 +142,8 @@
             text-decoration: underline;
         }
         .sticky-nav {
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
             background: rgba(253, 250, 247, 0.98);
             backdrop-filter: blur(10px);
             z-index: 10000;
@@ -152,7 +152,6 @@
         }
         @media (min-width: 768px) {
             .sticky-nav {
-                position: sticky;
                 width: auto;
             }
         }
@@ -189,7 +188,7 @@
         td {
             padding: 0.75rem;
             border-bottom: 1px solid var(--atlas-border);
-            word-break: break-word;
+            word-break: normal;
         }
         @media (min-width: 768px) {
             td {
@@ -227,14 +226,6 @@
                 width: 10px;
                 height: 10px;
                 margin-right: 10px;
-            }
-        }
-        main {
-            padding-top: 130px;
-        }
-        @media (min-width: 768px) {
-            main {
-                padding-top: 0;
             }
         }
         .overflow-x-auto {
@@ -291,7 +282,6 @@
 
 <main class="max-w-5xl mx-auto p-3 md:p-12">
 
-    <!-- PART I -->
     <section id="part1" class="block-card">
         <h2 class="section-title">Часть I. Общая рамка, среда, принципы и целевые ориентиры</h2>
         <p class="mb-6 leading-relaxed">Документ формирует стратегическую рамку развития Китая на 2026–2030 гг. Основное внимание уделяется переходу к высококачественному развитию (高质量发展), укреплению устойчивости экономической системы и повышению научно-технологического потенциала страны.</p>
@@ -387,7 +377,6 @@
         </div>
     </section>
 
-    <!-- PART II -->
     <section id="part2" class="block-card">
         <h2 class="section-title">Часть II. Современная промышленная система, услуги и инфраструктура</h2>
         <p class="mb-6">Развитие промышленности рассматривается как один из ключевых механизмов формирования новых источников роста. Акцент сделан на модернизации традиционных отраслей, развитии новых индустрий и расширении инфраструктурной базы.</p>
@@ -426,7 +415,6 @@
         </div>
     </section>
 
-    <!-- PART III -->
     <section id="part3" class="block-card">
         <h2 class="section-title">Часть III. Наука, технологии, образование и кадры</h2>
         <p class="mb-6">Развитие научно-технологического потенциала рассматривается как фундамент модернизации экономики. Особое внимание уделяется достижению высокоуровневой научно-технологической самостоятельности (高水平科技自立自强).</p>
@@ -449,7 +437,6 @@
         </div>
     </section>
 
-    <!-- PART IV -->
     <section id="part4" class="block-card">
         <h2 class="section-title">Часть IV. Цифровой Китай и внедрение ИИ</h2>
         <p class="mb-6">Цифровая трансформация экономики рассматривается как универсальный инструмент повышения эффективности промышленности, услуг и государственного управления.</p>
@@ -473,7 +460,6 @@
         </div>
     </section>
 
-    <!-- OTHER PARTS COMBINED FOR BREVITY BUT KEEPING TEXT -->
     <section id="part5" class="block-card">
         <h2 class="section-title">Часть V. Сильный внутренний рынок</h2>
         <div class="overflow-x-auto mb-6">
@@ -493,7 +479,6 @@
         </div>
     </section>
 
-    <!-- PART VIII -->
     <section id="part8" class="block-card">
         <h2 class="section-title">Часть VIII. Сельское хозяйство</h2>
         <div class="overflow-x-auto mb-6">
@@ -515,7 +500,6 @@
         </div>
     </section>
 
-    <!-- PART XI–XII -->
     <section id="part11" class="block-card">
         <h2 class="section-title">Часть XI–XII. Население и благосостояние</h2>
         <div class="overflow-x-auto mb-6">
@@ -537,7 +521,6 @@
         </div>
     </section>
 
-    <!-- PART XIII -->
     <section id="part13" class="block-card">
         <h2 class="section-title">Часть XIII. Зелёный переход</h2>
         <div class="overflow-x-auto mb-6">
@@ -560,28 +543,27 @@
         </div>
     </section>
 
-    <!-- FINAL SUMMARY -->
     <section id="summary" class="bg-[#8b2e1b] text-white rounded-2xl p-10 shadow-2xl mb-12">
         <h2 class="text-2xl font-bold mb-8 border-b border-red-800 pb-4">Итоговые выводы по всему документу</h2>
         <ul class="space-y-6">
             <li class="flex items-start">
-                <div class="w-2 h-2 mt-2 bg-white rounded-full mr-4 flex-shrink-0"></div>
+                <div class="w-2 h-2 mt-[0.55em] bg-white rounded-full mr-4 flex-shrink-0"></div>
                 <span class="text-lg opacity-90">В документе сохраняется курс на переход к более устойчивой модели развития, ориентированной на повышение качества роста, технологического потенциала и общей устойчивости экономики.</span>
             </li>
             <li class="flex items-start">
-                <div class="w-2 h-2 mt-2 bg-white rounded-full mr-4 flex-shrink-0"></div>
+                <div class="w-2 h-2 mt-[0.55em] bg-white rounded-full mr-4 flex-shrink-0"></div>
                 <span class="text-lg opacity-90">Научно-технологическая самостоятельность и развитие цифровой экономики занимают центральное место в системе приоритетов.</span>
             </li>
             <li class="flex items-start">
-                <div class="w-2 h-2 mt-2 bg-white rounded-full mr-4 flex-shrink-0"></div>
+                <div class="w-2 h-2 mt-[0.55em] bg-white rounded-full mr-4 flex-shrink-0"></div>
                 <span class="text-lg opacity-90">Внутренний рынок рассматривается как важный источник устойчивого роста, а инфраструктурная политика как ключевой инструмент модернизации.</span>
             </li>
             <li class="flex items-start">
-                <div class="w-2 h-2 mt-2 bg-white rounded-full mr-4 flex-shrink-0"></div>
+                <div class="w-2 h-2 mt-[0.55em] bg-white rounded-full mr-4 flex-shrink-0"></div>
                 <span class="text-lg opacity-90">Социальная и экологическая повестка встроены в общую стратегию развития через систему целевых ориентиров и направлений политики.</span>
             </li>
             <li class="flex items-start">
-                <div class="w-2 h-2 mt-2 bg-white rounded-full mr-4 flex-shrink-0"></div>
+                <div class="w-2 h-2 mt-[0.55em] bg-white rounded-full mr-4 flex-shrink-0"></div>
                 <span class="text-lg opacity-90">Безопасность рассматривается как один из базовых контуров реализации всех основных задач пятилетки.</span>
             </li>
         </ul>
