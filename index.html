@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналитический дайджест: КНР 15-я пятилетка</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fdfaf7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .loader {
+            text-align: center;
+            color: #8b2e1b;
+        }
+        .loader h1 {
+            margin: 0 0 1rem 0;
+            font-size: 1.5rem;
+        }
+        .spinner {
+            border: 3px solid #e8e1da;
+            border-top: 3px solid #8b2e1b;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <h1>Загрузка...</h1>
+        <div class="spinner"></div>
+    </div>
+
+    <script>
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+            window.location.href = './fiveyearplan-mobile.html';
+        } else {
+            window.location.href = './fiveyearplan-desktop.html';
+        }
+    </script>
+</body>
+</html>
